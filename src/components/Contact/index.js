@@ -29,7 +29,11 @@ function ContactForm () {
             setFormState({ ...formState, [e.target.name]: e.target.value });
         }
 
-
+        if (errorMessage) {
+            <div>
+                <p className='error-text'>{errorMessage}</p>
+            </div>
+        }
 
     }
 
@@ -56,6 +60,7 @@ function ContactForm () {
                     <label htmlFor='message'>Message</label>
                     <textarea name='message' defaultValue={message} onChange={handleChange} rows="5" />
                 </div>
+                <div>{errorMessage}</div>
                 <button type='submit'>Submit</button>
             </form>
         </section>
