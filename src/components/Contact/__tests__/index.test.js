@@ -11,8 +11,8 @@ describe('Contact component renders', () => {
     })
 
     it('renders', () => {
-        const { asFragment } = render(<Contact />)
-        expect(asFragment()).toMatchSnapshot()
+        const { asFragment } = render(<Contact />);
+        expect(asFragment()).toMatchSnapshot();
     })
 })
 
